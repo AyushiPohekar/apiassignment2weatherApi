@@ -106,10 +106,11 @@ function Create_data_container(start, end) {
               `https://api.openweathermap.org/data/2.5/weather?lat=${data[this.id].latlng[0]}&lon=${data[this.id].latlng[1]}&appid=9886709d311837a96f411b3ed9f3b47e`
             );
             var data1 = await response1.json();
-            console.log(data1);
+            //console.log(data1);
              var k=parseInt(this.id)+250;
             //  console.log("k",k);
             document.getElementById(k).innerHTML=(data1.main.temp-273.15).toFixed(2)+"&#176; C , " + data1.weather[0].description;
+        
             } catch (err) {
             console.log(err);
           }
